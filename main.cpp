@@ -5,15 +5,16 @@ void Sus_Game(); //Tasneem
 void Four_In_a_Row(); //Tasneem
 void Tic_Tac_Toe(); //Reem
 void Word_Tic_Tac_Toe(); //Reem
-void Misere_Tic_Tac_Toe(); //Nada
+int Misere_Tic_Tac_Toe(); //Nada
 void Diamond_Tic_Tac_Toe(); //Nada
 void Tic_Tac_Toe_Four(); //yarra
 void Pyramid_Tic_Tac_Toe(); //Yarra
-void Numerical_Tic_Tac_Toe(); //Group
+int Numerical_Tic_Tac_Toe(); //Group
 void Obstacles_Tic_Tac_Toe(); //Group
 void Infinty_Tic_Tac_Toe(); //Group
 void Ultimate_Tic_Tac_Toe(); //Group + Bouns
 void Memory_Tic_Tac_Toe(); //Group + Bouns
+int XO(); //DR.EL_Ramly
 int main()
 {
     int choice;
@@ -36,6 +37,7 @@ int main()
         cout<<"11. Infinty Tic Tac Toe\n";
         cout<<"12. Ultimate Tic Tac Toe\n";
         cout<<"13. Memory Tic Tac Toe\n";
+        cout<<"14. XO Board\n";
         cout<<"0 Exit\n";
         cout<<"========================================="<<endl;
         cout<<"Enter your choice: ";
@@ -46,15 +48,16 @@ int main()
             // case 2 :Four_In_a_Row(); break;
             // case 3 : Tic_Tac_Toe(); break;
             // case 4 : Word_Tic_Tac_Toe(); break;
-            // case 5 : Misere_Tic_Tac_Toe(); break;
+            case 5 : Misere_Tic_Tac_Toe(); break;
             // case 6 : Diamond_Tic_Tac_Toe(); break;
             case 7 : Tic_Tac_Toe_Four(); break;
             // case 8 : Pyramid_Tic_Tac_Toe(); break;
-            // case 9 : Numerical_Tic_Tac_Toe(); break;
+            case 9 : Numerical_Tic_Tac_Toe(); break;
             // case 10 : Obstacles_Tic_Tac_Toe(); break;
             // case 11 : Infinty_Tic_Tac_Toe(); break;
             // case 12 : Ultimate_Tic_Tac_Toe(); break;
             // case 13 : Memory_Tic_Tac_Toe(); break;
+            case 14: XO(); break;
             case 0 : cout<<"Goodbye!"<<endl; break;
         default: cout << "Invalid choice, try again.\n";
         }
