@@ -1,4 +1,4 @@
-#include "Board_Game_Classes.h"
+#include "BoardGame_Classes.h"
 #include "Tic_Tac_Toe_Four.h"
 
 XO4_board::XO4_board() : Board<char>(4,4) {
