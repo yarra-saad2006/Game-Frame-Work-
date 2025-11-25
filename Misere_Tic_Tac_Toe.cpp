@@ -50,10 +50,10 @@ bool Misere_Tic_Tac_Toe_Board::is_lose(Player<char>* player) {
     return false;
 }
 bool Misere_Tic_Tac_Toe_Board::is_draw(Player<char>* player) {
-    return (n_moves == 9 && is_win(player));
+    return (n_moves == 9 && !is_lose(player));
 }
 bool Misere_Tic_Tac_Toe_Board::game_is_over(Player<char>* player) {
-    return !is_win(player) || is_draw(player);
+    return is_lose(player) || is_draw(player);
 }
 
 Misere_Tic_Tac_Toe_UI::Misere_Tic_Tac_Toe_UI() : UI<char>("Welcome to FCAI Misere Tic - Tac - Toe!", 3) {}
@@ -65,8 +65,8 @@ Player<char>* Misere_Tic_Tac_Toe_UI::create_player(string& name, char symbol, Pl
 }
 Move<char>* Misere_Tic_Tac_Toe_UI::get_move(Player<char>* player) {
     int x, y;
-    cout << "\nNow it's " << player->get_name() << "'s turn!\n";
     if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\nNow it's " << player->get_name() << "'s turn!\n";
         cout << "\nPlease enter your move x and y (0 to 2): ";
         cin >> x >> y;
     }
