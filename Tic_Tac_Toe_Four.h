@@ -1,4 +1,4 @@
-#include"Board_Game_Classes.h"
+#include"BoardGame_Classes.h"
 class XO4_board : public Board<char>
 {
     char blank_symbol = '.';
@@ -10,6 +10,7 @@ class XO4_board : public Board<char>
     bool is_lose(Player<char>*) { return false; };
     bool is_draw(Player<char>* player);
     bool game_is_over(Player<char>* player);
+
 };
 class XO4_UI : public UI<char>
 {
