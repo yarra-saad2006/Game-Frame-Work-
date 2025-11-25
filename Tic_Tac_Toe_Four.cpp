@@ -14,7 +14,7 @@ XO4_board::XO4_board() : Board<char>(4,4) {
     board[3][0] = 'X';
     board[3][1] = 'O';
     board[3][2] = 'X';
-    board[3][3] = 'X';
+    board[3][3] = 'O';
 }
 
 XO4_board::~XO4_board() {}
